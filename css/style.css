@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #D5C455;
+    --primary-rgb-color: rgb(213, 196, 85);
+    --black-color: #000000;
+    --black-rgb-color: 0, 0, 0;
+    --white-color: #ffffff;
+    --white-rgb-color: rgb(255, 255, 255);
+    --title-color: #222;
+    --description-color: #999;
+    --primary-fonts: 'Poppins';
+    --gutter-width: 16px;
+}
+
+body {
+    font-family: var(--primary-fonts);
+    background-color: #F8F8F8;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gutter-width));
+    margin-right: calc(-1 * var(--gutter-width));
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding-left: var(--gutter-width);
+    padding-right: var(--gutter-width);
+}
+
+.w-1 {
+    width: 8.33%;
+}
+
+.w-2 {
+    width: 16.66%;
+}
+
+.w-3 {
+    width: 25%;
+}
+
+.w-4 {
+    width: 33.33%;
+}
+
+.w-5 {
+    width: 42.66%;
+}
+
+.w-6 {
+    width: 50%;
+}
+
+.w-7 {
+    width: 58.33%;
+}
+
+.w-8 {
+    width: 66.66%;
+}
+
+.w-9 {
+    width: 75%;
+}
+
+.w-10 {
+    width: 83.33%;
+}
+
+.w-11 {
+    width: 92.66%;
+}
+
+.w-12 {
+    width: 100%;
+}
+
+.w-1,
+.w-2,
+.w-3,
+.w-4,
+.w-5,
+.w-6,
+.w-7,
+.w-8,
+.w-9,
+.w-10,
+.w-11,
+.w-12 {
+    padding-left: var(--gutter-width);
+    padding-right: var(--gutter-width);
+}
+
+.gap {
+    row-gap: 10px;
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.mr-a {
+    margin: 0 auto;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.inl {
+    display: inline;
+}
+
+.in-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.py {
+    padding: 130px 0;
+}
+
+.pt {
+    padding-top: 130px;
+}
+
+.pb {
+    padding-bottom: 130px;
+}
+
+.align-start {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.align-end {
+    justify-content: flex-end;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.start {
+    justify-content: start;
+}
+
+.end {
+    justify-content: end;
+}
+
+.left {
+    justify-content: left;
+}
+
+.right {
+    justify-content: right;
+}
+
+/* cursor */
+.cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid black;
+    transition: all 200ms ease-out;
+    z-index: 9999;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+}
+  
+.cursor2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: black;
+    z-index: 9999;
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+}
+.hover {
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+  
+.cursorinnerhover {
+    width: 100px;
+    height: 100px;
+    opacity: .5;
+    background-color: var(--white-color);
+}
+/* loader */
+
+.load-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    position: fixed;
+    z-index: 9999;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: l4 2.5s infinite;
+}
+
+.loader:after {
+    animation-delay: -1.25s;
+}
+
+@keyframes l4 {
+    0% {
+        inset: 0 35px 35px 0;
+    }
+
+    12.5% {
+        inset: 0 35px 0 0;
+    }
+
+    25% {
+        inset: 35px 35px 0 0;
+    }
+
+    37.5% {
+        inset: 35px 0 0 0;
+    }
+
+    50% {
+        inset: 35px 0 0 35px;
+    }
+
+    62.5% {
+        inset: 0 0 0 35px;
+    }
+
+    75% {
+        inset: 0 0 35px 35px;
+    }
+
+    87.5% {
+        inset: 0 0 35px 0;
+    }
+
+    100% {
+        inset: 0 35px 35px 0;
+    }
+}
+
+/* header */
+
+.top-bar {
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.top-bar .logo a {
+    font-size: 24px;
+    display: block;
+    font-weight: 800;
+    color: var(--title-color);
+    padding: 12px 0;
+}
+
+nav {
+    min-width: 190px;
+    background-color: var(--white-color);
+    display: none;
+    padding: 10px 0;
+    border-radius: 2px;
+    z-index: 999;
+    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.1);
+}
+
+nav ul a {
+    color: rgba(var(--black-rgb-color), 0.7);
+    font-weight: 500;
+    padding: 10px 25px;
+    display: block;
+    font-size: 13px;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul a:hover {
+    color: var(--primary-color);
+}
+
+nav .hm a {
+    color: var(--primary-color);
+    font-size: 13px;
+}
+
+nav .ab a,
+nav .ser a,
+nav .exp a,
+nav .work a,
+nav .bl a {
+    color: var(--primary-color);
+    font-size: 13px;
+}
+
+.nav-i a {
+    color: var(--black-color);
+    font-size: 18px;
+    padding: 12px 0;
+}
+
+/* banner */
+
+.banner {
+    width: 100%;
+}
+
+.banner span {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.banner h1 {
+    font-weight: 700;
+    color: var(--title-color);
+    font-size: 80px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.banner-btn{
+    display: flex;
+}
+.banner .btn-1 a,
+.banner .btn-2 a {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--white-color);
+    padding: 16px 32px;
+    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.1);
+    word-spacing: 1px;
+    background-color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.banner .btn-2 a {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.banner img {
+    width: 545px;
+    height: 700px;
+    object-fit: cover;
+}
+
